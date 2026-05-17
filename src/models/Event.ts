@@ -6,6 +6,7 @@ export interface IEvent extends Document {
   time: string;
   location: string;
   description: string;
+  image?: string;
 }
 
 const EventSchema: Schema = new Schema({
@@ -14,6 +15,7 @@ const EventSchema: Schema = new Schema({
   time: { type: String, required: true },
   location: { type: String, required: true },
   description: { type: String, required: true },
+  image: { type: String, required: false },
 });
 
 export default mongoose.models.Event || mongoose.model<IEvent>("Event", EventSchema);

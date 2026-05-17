@@ -15,6 +15,7 @@ interface EventItem {
   time: string;
   location: string;
   description: string;
+  image?: string;
 }
 
 const Events = () => {
@@ -64,14 +65,27 @@ const Events = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.1 }}
-                className="bg-card rounded-xl border border-border p-6 hover:shadow-md transition-shadow"
+                className="bg-card rounded-xl border border-border overflow-hidden hover:shadow-md transition-shadow flex flex-col"
               >
-                <h3 className="font-heading text-xl font-semibold text-foreground">{ev.title}</h3>
-                <div className="mt-3 space-y-2 text-sm text-muted-foreground">
-                  <div className="flex items-center gap-2"><Clock size={14} /> {ev.date} · {ev.time}</div>
-                  <div className="flex items-center gap-2"><MapPin size={14} /> {ev.location}</div>
+                {ev.image && (
+                  <div className="aspect-video w-full overflow-hidden bg-muted border-b border-border">
+                    <img src={ev.image} alt={ev.title} className="w-full h-full object-cover" loading="lazy" />
+                  </div>
+                )}
+                <div className="p-6 flex flex-col justify-between flex-1">
+                  <div>
+                    <h3 className="font-heading text-xl font-semibold text-foreground">{ev.title}</h3>
+                    <div className="mt-3 space-y-2 text-sm text-muted-foreground">
+                      <div className="flex items-center gap-2">
+                        <Clock size={14} /> {ev.date} · {ev.time}
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <MapPin size={14} /> {ev.location}
+                      </div>
+                    </div>
+                    <p className="mt-4 text-muted-foreground leading-relaxed">{ev.description}</p>
+                  </div>
                 </div>
-                <p className="mt-4 text-muted-foreground leading-relaxed">{ev.description}</p>
               </motion.div>
             ))}
           </div>
