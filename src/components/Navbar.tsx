@@ -23,10 +23,10 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card/90 backdrop-blur-md border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-4 lg:px-8">
-        <Link href="/" className="flex items-center gap-3 min-w-0">
-          <img src="/logo.png" alt="Bishop Joseph Shanahan Foundation Logo" className="w-8 h-8 rounded-full border border-primary/20 object-cover" />
-          <span className="font-heading text-base md:text-xl font-bold text-foreground truncate">
-            Bishop Joseph Shanahan <span className="text-primary">Foundation</span>
+        <Link href="/" className="flex items-center gap-2 md:gap-3 shrink-0 mr-2">
+          <img src="/logo.png" alt="Bishop Joseph Shanahan Foundation Logo" className="w-8 h-8 rounded-full border border-primary/20 object-cover shrink-0" />
+          <span className="font-heading text-xs sm:text-sm md:text-xl font-bold text-foreground leading-tight whitespace-normal">
+            Bishop Joseph Shanahan <br className="md:hidden" /><span className="text-primary">Foundation</span>
           </span>
         </Link>
 
