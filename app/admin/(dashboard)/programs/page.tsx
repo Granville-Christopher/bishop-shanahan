@@ -115,10 +115,10 @@ export default function AdminPrograms() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-8">Manage Programs &amp; Activities</h1>
+      <h1 className="text-xl md:text-2xl font-bold mb-6">Manage Programs &amp; Activities</h1>
 
-      <div className="bg-card p-6 rounded-xl border border-border mb-8 shadow-sm">
-        <h2 className="text-xl font-semibold mb-4">Add New Program</h2>
+      <div className="bg-card p-6 rounded-xl border border-border mb-6 shadow-sm">
+        <h2 className="text-lg font-semibold mb-4">Add New Program</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>

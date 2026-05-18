@@ -39,7 +39,7 @@ export default function AdminNewsletters() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-8">Newsletter Subscribers</h1>
+      <h1 className="text-xl md:text-2xl font-bold mb-6">Newsletter Subscribers</h1>
 
       <div className="bg-card rounded-xl border border-border overflow-hidden shadow-sm max-w-2xl">
         <table className="w-full text-left border-collapse">

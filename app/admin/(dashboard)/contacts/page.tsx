@@ -39,7 +39,7 @@ export default function AdminContacts() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-8">Contact Messages</h1>
+      <h1 className="text-xl md:text-2xl font-bold mb-6">Contact Messages</h1>
 
       <div className="bg-card rounded-xl border border-border overflow-hidden shadow-sm">
         <table className="w-full text-left border-collapse">

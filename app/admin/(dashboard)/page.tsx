@@ -4,10 +4,10 @@ import { BookOpen, Calendar, LayoutDashboard, Heart, Mail, Users, MessageSquare 
 export default function AdminDashboard() {
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-2">Admin Dashboard</h1>
+      <h1 className="text-xl md:text-2xl font-bold mb-2">Admin Dashboard</h1>
       <p className="text-muted-foreground mb-8">Welcome to the Bishop Joseph Shanahan Foundation admin panel. Use the sections below to manage your website.</p>
 
-      <h2 className="text-xl font-semibold mb-4 text-foreground/80">Website Content</h2>
+      <h2 className="text-lg font-semibold mb-4 text-foreground/80">Website Content</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
         <Link href="/admin/books" className="bg-card rounded-xl border border-border p-6 hover:shadow-md transition-shadow group">
           <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
@@ -34,7 +34,7 @@ export default function AdminDashboard() {
         </Link>
       </div>
 
-      <h2 className="text-xl font-semibold mb-4 text-foreground/80">Form Submissions</h2>
+      <h2 className="text-lg font-semibold mb-4 text-foreground/80">Form Submissions</h2>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
         <Link href="/admin/contacts" className="bg-card rounded-xl border border-border p-6 hover:shadow-md transition-shadow group">
           <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
