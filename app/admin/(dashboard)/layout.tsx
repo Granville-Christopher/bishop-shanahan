@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BookOpen, Calendar, LayoutDashboard, Heart, Mail, Users, MessageSquare } from "lucide-react";
+import LogoutButton from "./LogoutButton";
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -38,6 +39,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           <Link href="/" className="flex items-center justify-center gap-2 px-4 py-3 text-sm font-semibold rounded-lg bg-primary text-primary-foreground">
             Back to Website
           </Link>
+          <LogoutButton />
         </div>
       </aside>
       <main className="flex-1 p-6 md:p-8 overflow-auto">
